@@ -7,7 +7,7 @@ This project is the culmination of the Meta Front-End Developer Professional Cer
 
 ### Live Demo
 
-[View Live Project](https://adkagj.github.io/little-lemon-project/)
+[View Live Project](https://adkagj.github.io/little-lemon/)
 
 ### Project Features
 
@@ -31,11 +31,11 @@ This project is the culmination of the Meta Front-End Developer Professional Cer
 ### Installation and Setup
 
 1. Clone the repository
-   git clone https://github.com/adkagj/little-lemon-project.git of the Meta Front-End Developer Professional Certificate program. It showcases a fully functional restaurant website for Little Lemon, featuring modern design, responsive layouts, and interactive components.
+   git clone https://github.com/adkagj/little-lemon.git of the Meta Front-End Developer Professional Certificate program. It showcases a fully functional restaurant website for Little Lemon, featuring modern design, responsive layouts, and interactive components.
 
 ### Live Demo
 
-[View Live Project](https://adkagj.github.io/little-lemon-project/)
+[View Live Project](https://github.com/adkagj/little-lemon.git/)
 
 ### Project Features
 
