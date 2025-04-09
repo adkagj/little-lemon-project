@@ -2,10 +2,15 @@
   text-align: center;
 }
 
-.App-logo {
+body {
+  margin: 20px 10vw;
+  padding: 0;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -25,7 +30,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #49ce57;
 }
 
 @keyframes App-logo-spin {

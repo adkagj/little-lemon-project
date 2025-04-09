@@ -1,0 +1,139 @@
+/* Base styles for navbar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  height: 40px;
+  margin: 20px;
+}
+
+.mobile-nav {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+}
+
+.hamburger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 20px;
+}
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.8rem;
+}
+
+.desktop-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.desktop-menu li a:hover {
+  color: #49ce57;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  list-style: none;
+}
+
+.mobile-menu li {
+  margin: 1rem 0;
+}
+
+.mobile-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav > a {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .nav {
+    padding: 1rem 1.5rem;
+    justify-content: space-around;
+  }
+
+  .desktop-menu {
+    gap: 1.5rem;
+  }
+}
+
+/* Laptop styles */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .nav {
+    padding: 1rem 4rem;
+  }
+
+  .desktop-menu li a {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop (large screen) styles */
+@media screen and (min-width: 1441px) {
+  .nav {
+    padding: 1rem 3rem;
+  }
+
+  .nav-logo {
+    height: 50px;
+  }
+
+  .desktop-menu li a {
+    font-size: 1.2rem;
+  }
+}
