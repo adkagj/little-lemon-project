@@ -21,8 +21,17 @@ const Nav = () => {
   };
 
   return (
-    <div className="nav">
-      <Link to="/">
+    <div className="nav" id="nav">
+      <Link
+        to="#nav"
+        onClick={(e) => {
+          e.preventDefault();
+          document
+            .getElementById("about")
+            .scrollIntoView({ behavior: "smooth" });
+          handleNavClick();
+        }}
+      >
         <img src={logo} alt="Logo" className="nav-logo" />
       </Link>
       {/* mobile-menu */}
