@@ -54,6 +54,11 @@
   padding: 20px;
 }
 
+.footer-logo img {
+  border-radius: 0;
+  width: 60%;
+}
+
 /* Tablet styles */
 @media screen and (max-width: 768px) {
   .footer-container {
@@ -79,7 +84,7 @@
     background: linear-gradient(135deg, #495e57 0%, #2d3a36 100%);
   }
 
-  .footer img.logo {
+  .footer-logo img {
     width: 120px;
     height: auto;
     margin-bottom: 1.5rem;
@@ -109,5 +114,9 @@
 
   .footer-container > div:last-child {
     border-bottom: none;
+  }
+
+  .copyright {
+    border-top: 1px solid rgba(244, 247, 245, 0.1);
   }
 }

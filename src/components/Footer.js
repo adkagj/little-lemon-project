@@ -42,8 +42,7 @@ const Footer = () => {
           <h4>Contact</h4>
           <ul>
             <li>123 Restaurant Street</li>
-            <li>New York, NY 10001</li>
-            <li>Phone: (555) 123-4567</li>
+            <li>Chicago, IL 60601</li> <li>Phone: (555) 123-4567</li>
             <li>Email: info@restaurant.com</li>
           </ul>
         </div>
