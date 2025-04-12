@@ -7,7 +7,7 @@ const Hero = () => {
   const navigate = useNavigate();
 
   const handleReservation = () => {
-    navigate("/reservations");
+    navigate("/booking");
   };
 
   return (

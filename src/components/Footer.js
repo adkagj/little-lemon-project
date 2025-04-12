@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
@@ -18,22 +19,37 @@ const Footer = () => {
           <h4>Navigation</h4>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link
+                to="/"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link
+                to="#about"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("about")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                About
+              </Link>
             </li>
             <li>
-              <a href="/menu">Menu</a>
+              <Link to="/">Menu</Link>
             </li>
             <li>
-              <a href="/order">Order Online</a>
+              <Link to="/Booking">Reservation</Link>
             </li>
             <li>
-              <a href="/reservation">Reservation</a>
+              <Link to="/">Order Online</Link>
             </li>
             <li>
-              <a href="/login">Login</a>
+              <Link to="/">Login</Link>
             </li>
           </ul>
         </div>
