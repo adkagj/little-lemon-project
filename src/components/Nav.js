@@ -64,7 +64,7 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link to="/" onClick={handleNavClick}>
+          <Link to="/Booking" onClick={handleNavClick}>
             Reservation
           </Link>
         </li>
@@ -106,7 +106,7 @@ const Nav = () => {
           <Link to="/">Menu</Link>
         </li>
         <li>
-          <Link to="/">Reservation</Link>
+          <Link to="/Booking">Reservation</Link>
         </li>
         <li>
           <Link to="/">Order Online</Link>
