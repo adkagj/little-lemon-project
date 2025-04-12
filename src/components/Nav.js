@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/Logo.svg";
 import mobileMenu from "../assets/images/icon-hamburger-menu.svg";
 import "./Nav.css";
@@ -10,11 +11,20 @@ const Nav = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const handleNavClick = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleHomeClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    handleNavClick();
+  };
+
   return (
     <div className="nav">
-      <a href="/">
+      <Link to="/">
         <img src={logo} alt="Logo" className="nav-logo" />
-      </a>
+      </Link>
       {/* mobile-menu */}
       <div className="mobile-nav">
         <img src={logo} alt="Logo" className="nav-logo" />
@@ -22,49 +32,87 @@ const Nav = () => {
           <img src={mobileMenu} alt="hamburger menu"></img>
         </button>
       </div>
-      {isMobileMenuOpen && (
-        <ul className="mobile-menu">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/">About</a>
-          </li>
-          <li>
-            <a href="/">Services</a>
-          </li>
-          <li>
-            <a href="/">Menu</a>
-          </li>
-          <li>
-            <a href="/">Reservation</a>
-          </li>
-          <li>
-            <a href="/">Order Online</a>
-          </li>
-          <li>
-            <a href="/">Login</a>
-          </li>
-        </ul>
-      )}
+
+      <ul className={`mobile-menu ${isMobileMenuOpen ? "active" : ""}`}>
+        <li>
+          <Link to="/" onClick={handleHomeClick}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="#about"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("about")
+                .scrollIntoView({ behavior: "smooth" });
+              handleNavClick();
+            }}
+          >
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to="/" onClick={handleNavClick}>
+            Services
+          </Link>
+        </li>
+        <li>
+          <Link to="/" onClick={handleNavClick}>
+            Menu
+          </Link>
+        </li>
+        <li>
+          <Link to="/" onClick={handleNavClick}>
+            Reservation
+          </Link>
+        </li>
+        <li>
+          <Link to="/" onClick={handleNavClick}>
+            Order Online
+          </Link>
+        </li>
+        <li>
+          <Link to="/" onClick={handleNavClick}>
+            Login
+          </Link>
+        </li>
+      </ul>
+
       <ul className="desktop-menu">
         <li>
-          <a href="/">Home</a>
+          <Link
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            Home
+          </Link>
         </li>
         <li>
-          <a href="/">About</a>
+          <Link
+            to="#about"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("about")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            About
+          </Link>
         </li>
         <li>
-          <a href="/">Menu</a>
+          <Link to="/">Menu</Link>
         </li>
         <li>
-          <a href="/">Reservation</a>
+          <Link to="/">Reservation</Link>
         </li>
         <li>
-          <a href="/">Order Online</a>
+          <Link to="/">Order Online</Link>
         </li>
         <li>
-          <a href="/">Login</a>
+          <Link to="/">Login</Link>
         </li>
       </ul>
     </div>
