@@ -1,12 +1,23 @@
 // Main booking page component
-import React from "react";
+import React, { useReducer } from "react";
 import BookingForm from "./BookingForm";
 import "./Booking.css";
 
-import { useState } from "react";
+const availableTimesReducer = (state, action) => {
+  switch (action.type) {
+    case "SET_TIMES":
+      return action.payload;
+    case "ADD_TIME":
+      return [...state, action.payload];
+    case "REMOVE_TIME":
+      return state.filter((time) => time !== action.payload);
+    default:
+      return state;
+  }
+};
 
 const BookingPage = () => {
-  const [availableTimes, setAvailableTimes] = useState([
+  const [availableTimes, dispatch] = useReducer(availableTimesReducer, [
     "17:00",
     "18:00",
     "19:00",
@@ -20,10 +31,7 @@ const BookingPage = () => {
       <div className="booking-page">
         <h1>Book Your Stay</h1>
 
-        <BookingForm
-          availableTimes={availableTimes}
-          setAvailableTimes={setAvailableTimes}
-        />
+        <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
       </div>
     </div>
   );

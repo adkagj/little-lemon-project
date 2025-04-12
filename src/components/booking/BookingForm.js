@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./BookingForm.css";
 
-const BookingForm = ({ availableTimes, setAvailableTimes }) => {
+const BookingForm = ({ availableTimes, dispatch }) => {
   //   const [availableTimes, setAvailableTimes] = useState([
   //     "17:00",
   //     "18:00",
@@ -23,6 +23,9 @@ const BookingForm = ({ availableTimes, setAvailableTimes }) => {
     e.preventDefault();
     // Handle form submission
     console.log("Form submitted:", formData);
+
+    /* dispatch */
+    dispatch({ type: "ADD_TIME", payload: formData.time });
   };
 
   const handleChange = (e) => {
@@ -100,7 +103,7 @@ const BookingForm = ({ availableTimes, setAvailableTimes }) => {
         </select>
       </div>
 
-      <button type="submit" className="button" disabled={guestError}>
+      <button type={handleSubmit} className="button" disabled={guestError}>
         Make Your Reservation
       </button>
     </form>
