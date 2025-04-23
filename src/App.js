@@ -1,12 +1,11 @@
 import React from "react";
-// import Header from "./components/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import Nav from "./components/Nav";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer";
-import { Route } from "react-router-dom";
-import { Routes } from "react-router-dom";
-import { BrowserRouter } from "react-router-dom";
 import Booking from "./components/booking/Booking";
+
 import "./App.css";
 
 import { useEffect } from "react";

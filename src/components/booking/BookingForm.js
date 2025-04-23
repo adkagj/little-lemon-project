@@ -2,15 +2,8 @@
 import React, { useState } from "react";
 import "./BookingForm.css";
 
-const BookingForm = ({ availableTimes, dispatch }) => {
-  //   const [availableTimes, setAvailableTimes] = useState([
-  //     "17:00",
-  //     "18:00",
-  //     "19:00",
-  //     "20:00",
-  //     "21:00",
-  //     "22:00",
-  //   ]);
+const BookingForm = ({ initialTimes, dispatch }) => {
+  // Initialize times function
 
   const [formData, setFormData] = useState({
     date: "",
@@ -66,11 +59,12 @@ const BookingForm = ({ availableTimes, dispatch }) => {
           onChange={handleChange}
           required
         >
-          {availableTimes.map((time) => (
-            <option key={time} value={time}>
-              {time}
-            </option>
-          ))}
+          {Array.isArray(initialTimes) &&
+            initialTimes.map((time) => (
+              <option key={time} value={time}>
+                {time}
+              </option>
+            ))}
         </select>
       </div>
 

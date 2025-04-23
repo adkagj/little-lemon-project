@@ -1,9 +1,10 @@
 // Main booking page component
-import React, { useReducer } from "react";
+
 import BookingForm from "./BookingForm";
+import React, { useReducer } from "react";
 import "./Booking.css";
 
-const availableTimesReducer = (state, action) => {
+export const availableTimesReducer = (state, action) => {
   switch (action.type) {
     case "SET_TIMES":
       return action.payload;
@@ -17,7 +18,7 @@ const availableTimesReducer = (state, action) => {
 };
 
 const BookingPage = () => {
-  const [availableTimes, dispatch] = useReducer(availableTimesReducer, [
+  const [initialTimes, dispatch] = useReducer(availableTimesReducer, [
     "17:00",
     "18:00",
     "19:00",
@@ -31,7 +32,7 @@ const BookingPage = () => {
       <div className="booking-page">
         <h1>Book Your Stay</h1>
 
-        <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+        <BookingForm initialTimes={initialTimes} dispatch={dispatch} />
       </div>
     </div>
   );
