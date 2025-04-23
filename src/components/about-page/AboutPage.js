@@ -23,7 +23,7 @@ const About = () => {
 
   return (
     <div className="about-container" id="about-us">
-      <h1>About Little Lemon</h1>
+      {/* <h1>About Little Lemon</h1> */}
 
       <section className="restaurant-info">
         <h2>Our Story</h2>
@@ -38,6 +38,16 @@ const About = () => {
           oils directly from the Mediterranean region, while sourcing fresh
           produce from local Chicago farmers.
         </p>
+        <p>
+          The Levanti family's culinary journey began in a small coastal town in
+          Greece, where they perfected their craft in their family-owned
+          taverna. When they moved to Chicago, they brought with them not just
+          recipes, but a philosophy of cooking that emphasizes fresh
+          ingredients, traditional techniques, and most importantly, the joy of
+          sharing meals with loved ones. Today, Little Lemon continues this
+          legacy, creating memorable dining experiences that transport our
+          guests to the sun-soaked shores of the Mediterranean.
+        </p>{" "}
       </section>
 
       <section className="chefs">
