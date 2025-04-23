@@ -1,0 +1,141 @@
+.about-container {
+  margin: 0 10vw;
+  padding-top: 8vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1rem;
+}
+
+.about-container h2 {
+  color: #495e57;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.restaurant-info {
+  border-bottom: 1px solid black;
+  padding-bottom: 2rem;
+}
+
+.restaurant-info p {
+  text-align: justify;
+}
+
+.chefs {
+  border-bottom: 1px solid black;
+  padding: 3rem 1rem;
+}
+
+.chefs-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.chef-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.chef-img img {
+  width: 120%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+.chef-profiles {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.chef {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chef p {
+  text-align: justify;
+  /* padding: 15px; */
+  margin: 0;
+}
+
+.atmosphere {
+  border-bottom: 1px solid black;
+  padding: 2rem 0;
+
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(248, 248, 248, 0.7)
+    ),
+    url("../../assets//images/restaurant.jpg");
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+
+  height: 35vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* text-align: center; */
+  align-items: center;
+}
+
+.atmosphere .text {
+  background-color: #f5f5f5a6;
+  border-radius: 16px;
+  padding: 0 2rem;
+}
+
+.atmosphere .text p {
+  text-align: justify;
+}
+
+.hours {
+  border-bottom: 1px solid black;
+  padding: 2rem 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.hours ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hours ul li {
+  list-style: none;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.location {
+  border-bottom: 1px solid black;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.location address {
+  text-align: justify;
+  font-style: normal;
+  font-weight: 400;
+  margin: 25px 0;
+}

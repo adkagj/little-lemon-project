@@ -15,6 +15,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: center;
+  align-items: center;
 }
 
 .about-text h1 {
@@ -31,6 +32,10 @@
 .about-text p {
   margin: 0;
   text-align: justify;
+}
+
+.about-text .button {
+  width: 25%;
 }
 
 .about-image {
