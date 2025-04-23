@@ -15,7 +15,7 @@ const Specials = () => {
   };
 
   return (
-    <div className="specials">
+    <div className="specials" id="specials">
       <div className="specials-text">
         <h1 className="title">This week's specials</h1>
         <button className="button" onClick={handleOrderOnline}>
