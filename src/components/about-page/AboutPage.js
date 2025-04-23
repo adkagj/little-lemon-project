@@ -1,5 +1,5 @@
 // About.js
-import React from "react";
+import React, { useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 import "./AboutPage.css";
@@ -7,6 +7,10 @@ import restaurantImg from "../../assets/images/restaurant.jpg";
 import aboutImage from "../../assets/images/about-image-b.jpg";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const mapStyles = {
     height: "400px",
     width: "100%",
