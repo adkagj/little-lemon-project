@@ -1,0 +1,483 @@
+.about-container {
+  /* margin: 0 3vw; */
+  margin: 0 auto;
+  padding-top: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  gap: 2rem;
+  border-radius: 20px;
+
+  max-width: 1200px;
+}
+
+.about-container h2 {
+  color: #495e57;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(185, 183, 168, 0.4);
+  position: relative;
+  padding-bottom: 1rem;
+  background: linear-gradient(90deg, #495e57, #fece14);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-container h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 6px;
+  background: linear-gradient(90deg, #fece14, #495e57);
+  border-radius: 3px;
+  animation: gradient-shift 3s infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.restaurant-info {
+  transition: all 0.3s ease;
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+
+.restaurant-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(73, 94, 87, 0.15);
+}
+
+.restaurant-info p {
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #333;
+  width: 100%;
+}
+
+.chefs {
+  padding: 3rem;
+  background: linear-gradient(135deg, #495e57 0%, #2d3a36 100%);
+  color: #f4f7f5;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.chefs::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 30% 107%,
+    rgba(254, 206, 20, 0.1) 0%,
+    rgba(73, 94, 87, 0.05) 55%
+  );
+  pointer-events: none;
+}
+
+.chefs h2 {
+  color: #fece14;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.chefs h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #fece14;
+  border-radius: 2px;
+}
+
+.chefs-container {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  /* align-items: start; */
+  position: relative;
+}
+
+.chef-profiles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  /* margin: auto 0; */
+}
+
+.chef-img {
+  width: 75%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  /* box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); */
+  transition: all 0.4s ease-out;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 0.5rem;
+  /* background: rgba(0, 0, 0, 0.1); */
+}
+
+.chef-img:hover {
+  transform: translateY(-10px);
+  /* box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4); */
+}
+
+.chef-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.5s ease;
+  border-radius: 15px;
+}
+
+.chef-img img:first-child {
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.chef-img img:last-child {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+  margin-left: -15%;
+}
+
+.chef-img:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.chef-img::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%); */
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.atmosphere {
+  padding: 3rem 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../../assets/images/restaurant.jpg");
+  background-position: center center;
+  background-size: cover;
+  height: 45vh;
+  border-radius: 20px;
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.atmosphere .text {
+  background-color: rgba(255, 255, 255, 0.589);
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(8px);
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.atmosphere:hover .text {
+  transform: translateY(0);
+  opacity: 0.1;
+}
+
+.hours {
+  padding: 3rem;
+  background-color: #495e57;
+  color: #f4f7f5;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(73, 94, 87, 0.2);
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.hours h2 {
+  color: #fece14;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hours ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+.hours ul li {
+  list-style: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.hours ul li:hover {
+  background: rgba(254, 206, 20, 0.2);
+  transform: translateX(10px);
+}
+
+.location {
+  padding: 2rem;
+  width: -webkit-fill-available;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(73, 94, 87, 0.1);
+}
+
+.location address {
+  text-align: justify;
+  font-style: normal;
+  font-weight: 500;
+  margin: 25px 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+@media screen and (max-width: 1200px) {
+  .about-container {
+    margin: 0 4vw;
+    padding: 6vh 2rem;
+  }
+
+  .chefs-container {
+    gap: 2.5rem;
+  }
+
+  .chef-img {
+    height: 400px;
+  }
+
+  .hours {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about-container {
+    margin: 0 3vw;
+    padding: 9vh 1.5rem;
+  }
+
+  .chefs-container {
+    /* grid-template-columns: 1fr; */
+    gap: 2rem;
+  }
+
+  .chef-img {
+    height: 350px;
+  }
+
+  .atmosphere {
+    height: 40vh;
+  }
+
+  .hours,
+  .location {
+    width: 100%;
+  }
+
+  .restaurant-info {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    margin: 0 2vw;
+    padding: 4vh 1rem;
+    gap: 1.5rem;
+  }
+
+  .about-container h2 {
+    font-size: 2rem;
+  }
+
+  .restaurant-info {
+    padding: 0 1rem;
+  }
+
+  .restaurant-info p {
+    font-size: 1rem;
+  }
+
+  .chefs {
+    padding: 2rem 1.5rem;
+  }
+
+  .chefs h2 {
+    font-size: 2rem;
+  }
+
+  .chef-profiles {
+    flex-direction: column;
+  }
+
+  .chef-img {
+    height: 300px;
+    gap: 0.5rem;
+  }
+  .chef-img img:first-child {
+    clip-path: polygon(0 0, 90% 0, 75% 100%, 0% 100%);
+  }
+  .chef-img img:last-child {
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 10% 100%);
+  }
+
+  .atmosphere {
+    height: 35vh;
+    height: fit-content;
+  }
+
+  .atmosphere .text {
+    padding: 1.5rem;
+    height: 100%;
+    backdrop-filter: unset;
+  }
+
+  .hours {
+    padding: 2rem;
+    width: 84vw;
+  }
+
+  .hours h2 {
+    font-size: 2rem;
+  }
+
+  .hours ul li {
+    font-size: 1rem;
+  }
+
+  .location {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-container {
+    margin: 0 1vw;
+    padding: 3vh 0.75rem;
+    gap: 1rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .restaurant-info {
+    padding: 0 0.75rem;
+  }
+
+  .restaurant-info p {
+    font-size: 0.95rem;
+  }
+
+  .chefs {
+    padding: 1.5rem 1rem;
+  }
+
+  .chefs h2 {
+    font-size: 1.75rem;
+  }
+
+  .chef-img {
+    height: 250px;
+  }
+
+  .atmosphere {
+    height: fit-content;
+  }
+
+  .atmosphere .text {
+    padding: 1rem;
+    height: fit-content;
+  }
+
+  .hours {
+    padding: 1.5rem;
+    width: 80vw;
+  }
+
+  .hours h2 {
+    font-size: 1.75rem;
+  }
+
+  .hours ul li {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .location {
+    padding: 1rem;
+  }
+
+  .location address {
+    font-size: 0.95rem;
+    margin: 15px 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .about-container {
+    padding: 2vh 0.5rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .restaurant-info {
+    padding: 0 0.5rem;
+  }
+
+  .chef-img {
+    height: 200px;
+  }
+
+  /* .atmosphere {
+    height: 25vh;
+  } */
+
+  .hours ul li {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
