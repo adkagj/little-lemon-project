@@ -1,5 +1,6 @@
 .about-container {
-  margin: 0 3vw;
+  /* margin: 0 3vw; */
+  margin: 0 auto;
   padding-top: 8vh;
   display: flex;
   flex-direction: column;
@@ -346,8 +347,13 @@
     font-size: 2rem;
   }
 
+  .chef-profiles {
+    flex-direction: column;
+  }
+
   .chef-img {
     height: 300px;
+    gap: 0.5rem;
   }
   .chef-img img:first-child {
     clip-path: polygon(0 0, 90% 0, 75% 100%, 0% 100%);
