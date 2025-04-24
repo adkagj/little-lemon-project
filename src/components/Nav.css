@@ -178,8 +178,9 @@
 @media screen and (min-width: 1441px) {
   .nav-container {
     padding: 1rem 6rem;
-    width: 82vw;
-    margin: 0 auto;
+    /* width: 82vw; */
+    /* margin: 0 auto; */
+    grid-template-columns: 15% 75%;
   }
 
   .nav-logo {
