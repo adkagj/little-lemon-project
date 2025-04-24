@@ -8,6 +8,8 @@
   text-align: left;
   gap: 2rem;
   border-radius: 20px;
+
+  max-width: 1200px;
 }
 
 .about-container h2 {
@@ -111,34 +113,42 @@
 }
 
 .chefs-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 3rem;
-  align-items: start;
+  /* align-items: start; */
   position: relative;
 }
 
 .chef-profiles {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 2rem;
-  margin: auto 0;
+  /* margin: auto 0; */
 }
 
 .chef-img {
-  width: 100%;
+  width: 75%;
   height: 450px;
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); */
   transition: all 0.4s ease-out;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 0.5rem;
+  /* background: rgba(0, 0, 0, 0.1); */
 }
 
 .chef-img:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
+  /* box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4); */
 }
 
 .chef-img img {
@@ -147,10 +157,21 @@
   object-fit: cover;
   object-position: center;
   transition: all 0.5s ease;
+  border-radius: 15px;
+}
+
+.chef-img img:first-child {
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.chef-img img:last-child {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+  margin-left: -15%;
 }
 
 .chef-img:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 .chef-img::after {
@@ -160,8 +181,9 @@
   left: 0;
   right: 0;
   height: 30%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%); */
   transition: all 0.3s ease;
+  z-index: 1;
 }
 
 .atmosphere {
@@ -272,7 +294,7 @@
   }
 
   .chefs-container {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     gap: 2rem;
   }
 
@@ -323,6 +345,12 @@
 
   .chef-img {
     height: 300px;
+  }
+  .chef-img img:first-child {
+    clip-path: polygon(0 0, 90% 0, 75% 100%, 0% 100%);
+  }
+  .chef-img img:last-child {
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 10% 100%);
   }
 
   .atmosphere {

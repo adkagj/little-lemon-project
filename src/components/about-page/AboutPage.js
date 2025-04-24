@@ -3,8 +3,9 @@ import React, { useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 import "./AboutPage.css";
-import restaurantImg from "../../assets/images/restaurant.jpg";
-import aboutImage from "../../assets/images/about-image-b.jpg";
+// import restaurantImg from "../../assets/images/restaurant.jpg";
+import aboutImageB from "../../assets/images/about-image-b.jpg";
+import aboutImageA from "../../assets/images/about-image-a.jpg";
 
 const About = () => {
   useEffect(() => {
@@ -72,7 +73,9 @@ const About = () => {
           </div>
 
           <div className="chef-img">
-            <img src={aboutImage} alt="Little Lemon chefs" />
+            <img src={aboutImageA} alt="Little Lemon chefs" />
+
+            <img src={aboutImageB} alt="Little Lemon chefs" />
           </div>
         </div>
       </section>
