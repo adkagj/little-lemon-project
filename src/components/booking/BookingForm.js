@@ -97,7 +97,7 @@ const BookingForm = ({ initialTimes, dispatch }) => {
         </select>
       </div>
 
-      <button type={handleSubmit} className="button" disabled={guestError}>
+      <button type="submit" className="button" disabled={guestError}>
         Make Your Reservation
       </button>
     </form>
