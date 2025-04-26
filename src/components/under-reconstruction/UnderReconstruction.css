@@ -5,7 +5,7 @@
   justify-content: center;
   min-height: 100vh;
   background-color: #f5f5f5;
-  padding: 20px;
+  padding: 0 10vw;
   text-align: center;
 }
 
@@ -22,23 +22,27 @@
   line-height: 1.6;
 }
 
-.construction-icon {
-  font-size: 4rem;
-  color: #ffa500;
-  margin-bottom: 2rem;
+@media screen and (max-width: 768px) {
+  .under-reconstruction h1 {
+    font-size: 2rem;
+  }
+
+  .under-reconstruction p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
 }
 
-.contact-info {
-  margin-top: 2rem;
-  font-size: 1rem;
-  color: #888;
-}
+@media screen and (max-width: 480px) {
+  .under-reconstruction {
+    padding: 4vh 4vw;
+  }
 
-.contact-info a {
-  color: #0066cc;
-  text-decoration: none;
-}
+  .under-reconstruction h1 {
+    font-size: 1.5rem;
+  }
 
-.contact-info a:hover {
-  text-decoration: underline;
+  .under-reconstruction p {
+    font-size: 0.9rem;
+  }
 }
