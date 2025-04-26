@@ -55,7 +55,10 @@ const BookingForm = ({ onSubmit }) => {
     setFormData((prevState) => {
       const newData = {
         ...prevState,
-        [name]: name === "guests" ? Math.min(parseInt(value), 10) : value,
+        [name]:
+          name === "guests"
+            ? Math.min(Math.max(parseInt(value) || 1, 1), 10)
+            : value,
       };
       saveFormData(newData); // Save on each change
       return newData;
@@ -64,11 +67,15 @@ const BookingForm = ({ onSubmit }) => {
   };
 
   const guestError =
-    formData.guests === 10
+    formData.guests === 10 || formData.guests > 10
       ? "For groups larger than 10, please contact us directly"
-      : formData.guests === 1
+      : formData.guests === 1 || formData.guest < 1
       ? "Perfect for an intimate dining experience!"
-      : "";
+      : // : formData.guests < 1
+        // ? "Number of guests must be at least 1"
+        // : formData.guests > 10
+        // ? "Maximum number of guests is 10"
+        "";
 
   // Get today's date in YYYY-MM-DD format for min attribute
   const today = new Date().toISOString().split("T")[0];
@@ -142,7 +149,9 @@ const BookingForm = ({ onSubmit }) => {
       <button
         type="submit"
         className="button"
-        disabled={formData.guests === 10}
+        disabled={
+          formData.guests === 10 || formData.guests < 1 || formData.guests > 10
+        }
       >
         Make Your Reservation
       </button>
