@@ -1,43 +1,80 @@
 // Modern reservation form component
-import React, { useState } from "react";
+import React, { useState, useReducer, useNavigate } from "react";
 import "./BookingForm.css";
 
-const BookingForm = ({ initialTimes, dispatch }) => {
-  // Initialize times function
+// Add localStorage helper functions
+const saveFormData = (data) => {
+  localStorage.setItem("bookingFormData", JSON.stringify(data));
+};
+
+// const getStoredFormData = () => {
+//   const stored = localStorage.getItem("bookingFormData");
+//   return stored ? JSON.parse(stored) : null;
+// };
+
+const availableTimesReducer = (state, action) => {
+  switch (action.type) {
+    case "ADD_TIME":
+      return [...state, action.payload];
+    default:
+      return state;
+  }
+};
+
+const BookingForm = ({ onSubmit }) => {
+  const [initialTimes, dispatch] = useReducer(availableTimesReducer, [
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00",
+  ]);
 
   const [formData, setFormData] = useState({
     date: "",
     time: "17:00",
     guests: 1,
-    occasion: "birthday",
+    occasion: "Birthday",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
     console.log("Form submitted:", formData);
-
-    /* dispatch */
-    dispatch({ type: "ADD_TIME", payload: formData.time });
+    console.log("Date:", formData.date);
+    console.log("Time:", formData.time);
+    console.log("Number of guests:", formData.guests);
+    console.log("Occasion:", formData.occasion);
+    saveFormData(formData); // Save form data to localStorage
+    onSubmit(formData); // Pass form data to the parent component
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+    setFormData((prevState) => {
+      const newData = {
+        ...prevState,
+        [name]: name === "guests" ? Math.min(parseInt(value), 10) : value,
+      };
+      saveFormData(newData); // Save on each change
+      return newData;
+    });
+    console.log(`${name} changed to:`, value);
   };
 
   const guestError =
-    formData.guests > 10
+    formData.guests === 10
       ? "For groups larger than 10, please contact us directly"
-      : formData.guests < 1
-      ? "Number of guests must be at least 1"
+      : formData.guests === 1
+      ? "Perfect for an intimate dining experience!"
       : "";
 
+  // Get today's date in YYYY-MM-DD format for min attribute
+  const today = new Date().toISOString().split("T")[0];
+
   return (
-    <form onSubmit={handleSubmit} className="reservation-form">
+    <form onSubmit={handleSubmit} className="form">
       <div className="form-group">
         <label htmlFor="date">Date</label>
         <input
@@ -46,6 +83,7 @@ const BookingForm = ({ initialTimes, dispatch }) => {
           name="date"
           value={formData.date}
           onChange={handleChange}
+          min={today}
           required
         />
       </div>
@@ -59,12 +97,11 @@ const BookingForm = ({ initialTimes, dispatch }) => {
           onChange={handleChange}
           required
         >
-          {Array.isArray(initialTimes) &&
-            initialTimes.map((time) => (
-              <option key={time} value={time}>
-                {time}
-              </option>
-            ))}
+          {initialTimes.map((time) => (
+            <option key={time} value={time}>
+              {time}
+            </option>
+          ))}
         </select>
       </div>
 
@@ -94,10 +131,19 @@ const BookingForm = ({ initialTimes, dispatch }) => {
         >
           <option value="birthday">Birthday</option>
           <option value="anniversary">Anniversary</option>
+          <option value="engagement">Engagement</option>
+          <option value="graduation">Graduation</option>
+          <option value="business">Business Meeting</option>
+          <option value="date">Date Night</option>
+          <option value="celebration">General Celebration</option>{" "}
         </select>
       </div>
 
-      <button type="submit" className="button" disabled={guestError}>
+      <button
+        type="submit"
+        className="button"
+        disabled={formData.guests === 10}
+      >
         Make Your Reservation
       </button>
     </form>

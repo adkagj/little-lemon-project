@@ -1,41 +1,54 @@
-// Main booking page component
-
+import { useState } from "react";
 import BookingForm from "./BookingForm";
-import React, { useReducer } from "react";
+import BookingConfirm from "./BookingConfirm";
 import "./Booking.css";
 
-export const availableTimesReducer = (state, action) => {
-  switch (action.type) {
-    case "SET_TIMES":
-      return action.payload;
-    case "ADD_TIME":
-      return [...state, action.payload];
-    case "REMOVE_TIME":
-      return state.filter((time) => time !== action.payload);
-    default:
-      return state;
-  }
-};
+const Booking = () => {
+  const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState(null);
 
-const BookingPage = () => {
-  const [initialTimes, dispatch] = useReducer(availableTimesReducer, [
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ]);
+  const handleFormSubmit = (data) => {
+    setFormData(data);
+    setStep(2); // Move to the confirmation step
+    console.log("Moving to step:", 2);
+  };
+
+  const handleStepClick = (stepNumber) => {
+    // Only allow moving to step 2 if form data exists
+    if (stepNumber === 2 && !formData) {
+      console.log("Please fill out the form first");
+      return;
+    }
+    setStep(stepNumber);
+    console.log("Moving to step:", stepNumber);
+  };
+
+  // Log active step whenever it changes
+  console.log("Current active step:", step);
 
   return (
-    <div className="booking" id="booking">
-      <div className="booking-page">
-        <h1>Book Your Stay</h1>
-
-        <BookingForm initialTimes={initialTimes} dispatch={dispatch} />
+    <div className="booking">
+      <h1>Book Your Stay</h1>
+      <div className="booking-steps">
+        <div
+          className={`step-item ${step === 1 ? "active" : ""}`}
+          onClick={() => handleStepClick(1)}
+          style={{ cursor: "pointer" }}
+        >
+          1
+        </div>
+        <div
+          className={`step-item ${step === 2 ? "active" : ""}`}
+          onClick={() => handleStepClick(2)}
+          style={{ cursor: formData ? "pointer" : "not-allowed" }}
+        >
+          2
+        </div>
       </div>
+      {step === 1 && <BookingForm onSubmit={handleFormSubmit} />}
+      {step === 2 && formData && <BookingConfirm formData={formData} />}
     </div>
   );
 };
 
-export default BookingPage;
+export default Booking;
