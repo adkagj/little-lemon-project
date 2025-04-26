@@ -86,7 +86,7 @@ describe("BookingForm", () => {
     fireEvent.change(screen.getByLabelText(/time/i), {
       target: { value: "18:00" },
     });
-    fireEvent.change(screen.getByLabelText(/number of guests/i), {
+      target: { value: "18:00" },    fireEvent.change(screen.getByLabelText(/number of guests/i), {
       target: { value: 3 },
     });
     fireEvent.change(screen.getByLabelText(/occasion/i), {
