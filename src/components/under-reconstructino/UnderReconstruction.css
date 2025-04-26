@@ -1,0 +1,44 @@
+.under-reconstruction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+.under-reconstruction h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.under-reconstruction p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.construction-icon {
+  font-size: 4rem;
+  color: #ffa500;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #888;
+}
+
+.contact-info a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
