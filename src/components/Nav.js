@@ -64,12 +64,12 @@ const Nav = () => {
             </Link>
           </li>
           <li>
-            <Link to="/" onClick={handleNavClick}>
+            <Link to="/under-construction" onClick={handleNavClick}>
               Order Online
             </Link>
           </li>
           <li>
-            <Link to="/" onClick={handleNavClick}>
+            <Link to="/under-construction" onClick={handleNavClick}>
               Login
             </Link>
           </li>
@@ -94,10 +94,10 @@ const Nav = () => {
             <Link to="/Booking">Reservations</Link>
           </li>
           <li>
-            <Link to="/">Order Online</Link>
+            <Link to="/under-construction">Order Online</Link>
           </li>
           <li>
-            <Link to="/">Login</Link>
+            <Link to="/under-construction">Login</Link>
           </li>
         </ul>
       </div>

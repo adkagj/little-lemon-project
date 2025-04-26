@@ -152,6 +152,7 @@ const BookingForm = ({ onSubmit }) => {
         disabled={
           formData.guests === 10 || formData.guests < 1 || formData.guests > 10
         }
+        aria-label="On Click"
       >
         Make Your Reservation
       </button>
