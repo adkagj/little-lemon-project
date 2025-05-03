@@ -35,7 +35,7 @@ const BookingForm = ({ onSubmit }) => {
     date: "",
     time: "17:00",
     guests: 1,
-    occasion: "Birthday",
+    occasion: "General Celebration",
   });
 
   const handleSubmit = (e) => {
@@ -136,13 +136,13 @@ const BookingForm = ({ onSubmit }) => {
           onChange={handleChange}
           required
         >
+          <option value="celebration">General Celebration</option>{" "}
           <option value="birthday">Birthday</option>
           <option value="anniversary">Anniversary</option>
           <option value="engagement">Engagement</option>
           <option value="graduation">Graduation</option>
           <option value="business">Business Meeting</option>
           <option value="date">Date Night</option>
-          <option value="celebration">General Celebration</option>{" "}
         </select>
       </div>
 

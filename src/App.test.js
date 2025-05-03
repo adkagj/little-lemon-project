@@ -86,16 +86,14 @@ describe("BookingForm", () => {
     fireEvent.change(screen.getByLabelText(/time/i), {
       target: { value: "18:00" },
     });
-      target: { value: "18:00" },    fireEvent.change(screen.getByLabelText(/number of guests/i), {
+      fireEvent.change(screen.getByLabelText(/number of guests/i), {
       target: { value: 3 },
     });
     fireEvent.change(screen.getByLabelText(/occasion/i), {
       target: { value: "birthday" },
     });
 
-    fireEvent.click(
-      screen.getByRole("button", { name: /make your reservation/i })
-    );
+    fireEvent.click(screen.getByText(/Make Your Reservation/i));
 
     expect(handleSubmit).toHaveBeenCalledWith({
       date: "2025-05-10",
