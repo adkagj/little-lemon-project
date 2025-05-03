@@ -1,39 +1,91 @@
-# Little Lemon Restaurant Website
+# 🍋 Little Lemon Restaurant Website
 
-## Meta Front-End Developer Capstone Project
+![GitHub Repo Stars](https://img.shields.io/github/stars/adkagj/little-lemon-project?style=social)
+![GitHub Forks](https://img.shields.io/github/forks/adkagj/little-lemon-project?style=social)
+![GitHub License](https://img.shields.io/github/license/adkagj/little-lemon-project)
 
-This project is the culmination of my journey through the Meta Front-End Developer Professional Certificate program. As my capstone project, it showcases a fully functional restaurant website for **Little Lemon**, featuring a modern design, responsive layouts, and interactive components.
+---
 
-### Live Demo
+## 📋 Project Overview
 
-[View Live Project](https://adkagj.github.io/little-lemon/)
+This project is part of the **Meta Front-End Developer Professional Certificate** capstone.  
+It showcases a modern and responsive website for **Little Lemon Restaurant**, built with a focus on user experience, performance, and accessibility.
 
-### Project Overview
+---
 
-The **Little Lemon Restaurant Website** is designed to offer users a seamless and enjoyable experience. The website includes essential features such as:
+## ✨ Features
 
-- **Responsive Design**: Ensures a smooth experience across devices (desktop, tablet, and mobile).
-- **Table Booking System**: Allows users to easily book tables at the restaurant.
-- **Menu Display**: A dynamic menu page displaying the restaurant’s offerings.
-- **User Authentication**: Secure sign-in and sign-up functionality.
-- **Interactive Navigation**: An intuitive and user-friendly navigation bar.
-- **Form Validation**: Ensures correct data entry for user inputs.
-- **API Integration**: Integrates with an API to handle data and functionality.
+- ✅ **Responsive Design** — Optimized for desktop, tablet, and mobile devices
+- ✅ **Table Booking System** — Easy-to-use reservation form
+- ✅ **Menu Highlights** — Selected restaurant specialties showcased
+- 🚧 **Sign-In/Sign-Up Pages** — Currently under construction
+- ✅ **Interactive Navigation** — Smooth and intuitive user experience
+- ✅ **Form Validation** — Secure and correct data entry
+- ✅ **API Integration** — Reservation data handled via API
+- ✅ **Accessibility** — ARIA labels and keyboard navigation
+- ✅ **Performance Optimization** — Lazy loading and code splitting
+- ✅ **SEO Optimization** — Semantic HTML and meta tags
+- ✅ **Analytics Integration** — Tracks user behavior and page visits
 
-### Built With
+---
 
-- **React.js**: For building the user interface and interactive components.
-- **HTML5**: For structuring the content.
-- **CSS3**: For styling and responsive design.
-- **JavaScript**: For dynamic functionality.
-- **React Router**: For handling client-side routing.
-- **Jest**: For writing and running unit tests.
+## 🛠️ Built With
 
-### Installation and Setup
+| Technology            | Description                           |
+| --------------------- | ------------------------------------- |
+| **React.js**          | Front-end framework for UI components |
+| **HTML5**             | Semantic structuring of content       |
+| **CSS3**              | Styling and responsive layouts        |
+| **JavaScript (ES6+)** | Dynamic functionality                 |
+| **React Router**      | Client-side navigation                |
+| **Styled Components** | Component-scoped styling              |
+| **Jest**              | Unit testing                          |
 
-To run the project locally, follow these steps:
+---
+
+## 🚀 Installation and Setup
+
+Follow these steps to run the project locally:
 
 1. **Clone the repository**:
+
    ```bash
-   git clone https://github.com/adkagj/little-lemon.git
+   git clone https://github.com/adkagj/little-lemon-project.git
    ```
+
+2. **Navigate into the project folder**:
+
+   ```bash
+   cd little-lemon-project
+   ```
+
+3. **Install the dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+Your app will be running at:  
+👉 `http://localhost:3000`
+
+---
+
+## 📚 Acknowledgments
+
+- Thanks to the Meta Front-End Developer team for guidance and structure.
+- Special inspiration from modern UX/UI best practices and real-world restaurant websites.
+
+---
+
+## 📎 Additional Notes
+
+- **Sign-In/Sign-Up** functionality is **currently under construction**.
+- **Dark Mode** is **not implemented**.
+- The **menu** displays a selection of **specialties**, not a full restaurant menu.
+
+---

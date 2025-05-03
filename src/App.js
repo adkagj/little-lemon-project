@@ -5,6 +5,8 @@ import Nav from "./components/Nav";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer";
 import Booking from "./components/booking/Booking";
+import About from "./components/about-page/AboutPage";
+import UnderReconstruction from "./components/under-reconstruction/UnderReconstruction";
 
 import "./App.css";
 
@@ -25,6 +27,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/about-us" element={<About />} />
+
+          <Route path="/under-construction" element={<UnderReconstruction />} />
         </Routes>
         <Footer />
       </BrowserRouter>

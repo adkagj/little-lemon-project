@@ -1,13 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
-
 import "./Footer.css";
-
 import whiteLogo from "../assets/images/white-logo.png";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleHomeClick = () => {
+    navigate("/");
+  };
+
+  const handleAboutClick = () => {
+    navigate("/", { state: { scrollTo: "about" } });
+  };
+
+  const handleSpecialsClick = () => {
+    navigate("/", { state: { scrollTo: "specials" } });
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -19,28 +31,19 @@ const Footer = () => {
           <h4>Navigation</h4>
           <ul>
             <li>
-              <Link
-                to="/"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              >
+              <Link to="/" onClick={handleHomeClick}>
                 Home
               </Link>
             </li>
             <li>
-              <Link
-                to="#about"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .getElementById("about")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}
-              >
+              <Link to="/#about" onClick={handleAboutClick}>
                 About
               </Link>
             </li>
             <li>
-              <Link to="/">Menu</Link>
+              <Link to="/#specials" onClick={handleSpecialsClick}>
+                Menu
+              </Link>
             </li>
             <li>
               <Link to="/Booking">Reservation</Link>

@@ -41,7 +41,8 @@
 }
 
 .testimonial-item p {
-  text-align: left;
+  text-align: center;
+  color: #000000;
 }
 
 .reviewer-info {
