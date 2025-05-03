@@ -24,7 +24,7 @@ const Hero = () => {
         </button>
       </div>
       <div className="hero-image">
-        <img src={restaurantFoodImage} alt="Restaurant food" />
+        <img src={restaurantFoodImage} alt="Restaurant food" loading="lazy" />
       </div>
 
       <div className="hero-overlay"></div>

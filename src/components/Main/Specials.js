@@ -1,7 +1,7 @@
 import React from "react";
 // import "./Specials.css";
 import greekSalad from "../../assets/images/greek-salad.jpg";
-import bruchetta from "../../assets/images/bruchetta.svg";
+import bruchetta from "../../assets/images/bruchetta.jpg";
 import lemonDessert from "../../assets/images/lemon-dessert.jpg";
 import deliveryIcon from "../../assets/images/delivery-icon.png";
 
@@ -25,7 +25,12 @@ const Specials = () => {
 
       <div className="specials-container">
         <div className="special-item">
-          <img src={greekSalad} alt="Greek salad" className="special-image" />
+          <img
+            src={greekSalad}
+            alt="Greek salad"
+            className="special-image"
+            loading="lazy"
+          />
           <div className="special-info">
             <h3>Greek Salad</h3>
             <p>$12.99</p>
@@ -43,12 +48,18 @@ const Specials = () => {
               alt="Delivery icon"
               className="delivery-icon"
               onClick={handleOrderOnline}
+              loading="lazy"
             />
           </div>
         </div>
 
         <div className="special-item">
-          <img src={bruchetta} alt="Bruschetta" className="special-image" />
+          <img
+            src={bruchetta}
+            alt="Bruschetta"
+            className="special-image"
+            loading="lazy"
+          />
           <div className="special-info">
             <h3>Bruschetta</h3>
             <p>$8.99</p>
@@ -66,6 +77,7 @@ const Specials = () => {
               alt="Delivery icon"
               className="delivery-icon"
               onClick={handleOrderOnline}
+              loading="lazy"
             />
           </div>
         </div>
@@ -75,6 +87,7 @@ const Specials = () => {
             src={lemonDessert}
             alt="Lemon dessert"
             className="special-image"
+            loading="lazy"
           />
           <div className="special-info">
             <h3>Lemon Dessert</h3>
@@ -93,6 +106,7 @@ const Specials = () => {
               alt="Delivery icon"
               className="delivery-icon"
               onClick={handleOrderOnline}
+              loading="lazy"
             />
           </div>
         </div>

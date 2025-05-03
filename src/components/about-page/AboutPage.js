@@ -73,9 +73,9 @@ const About = () => {
           </div>
 
           <div className="chef-img">
-            <img src={aboutImageA} alt="Little Lemon chefs" />
+            <img src={aboutImageA} alt="Little Lemon chefs" loading="lazy" />
 
-            <img src={aboutImageB} alt="Little Lemon chefs" />
+            <img src={aboutImageB} alt="Little Lemon chefs" loading="lazy" />
           </div>
         </div>
       </section>

@@ -32,8 +32,8 @@ const About = () => {
       </div>
 
       <div className="about-image">
-        <img src={imageOne} alt="Little Lemon chefs" />
-        <img src={imageTwo} alt="Little Lemon chefs" />
+        <img src={imageOne} alt="Little Lemon chefs" loading="lazy" />
+        <img src={imageTwo} alt="Little Lemon chefs" loading="lazy" />
       </div>
     </div>
   );
