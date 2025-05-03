@@ -1,7 +1,9 @@
 import React from "react";
 
 import { Link, useNavigate } from "react-router-dom";
+
 import logo from "../assets/images/logo.svg";
+
 import mobileMenu from "../assets/images/icon-hamburger-menu.svg";
 import "./Nav.css";
 
@@ -29,6 +31,7 @@ const Nav = () => {
 
   return (
     <div className="nav" id="nav">
+
       <div className="nav-container">
         <Link to="/" onClick={handleHomeClick}>
           <img src={logo} alt="Logo" className="nav-logo" />
@@ -101,6 +104,7 @@ const Nav = () => {
           </li>
         </ul>
       </div>
+
     </div>
   );
 };
