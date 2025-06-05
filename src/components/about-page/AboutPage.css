@@ -1,5 +1,4 @@
 .about-container {
-  /* margin: 0 3vw; */
   margin: 0 auto;
   padding-top: 8vh;
   display: flex;
@@ -114,13 +113,10 @@
 }
 
 .chefs-container {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  /* align-items: start; */
   position: relative;
 }
 
@@ -129,7 +125,6 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 2rem;
-  /* margin: auto 0; */
 }
 
 .chef-img {
@@ -138,18 +133,15 @@
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  /* box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); */
   transition: all 0.4s ease-out;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding: 0.5rem;
-  /* background: rgba(0, 0, 0, 0.1); */
-}
+ }
 
 .chef-img:hover {
   transform: translateY(-10px);
-  /* box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4); */
 }
 
 .chef-img img {
@@ -182,7 +174,6 @@
   left: 0;
   right: 0;
   height: 30%;
-  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%); */
   transition: all 0.3s ease;
   z-index: 1;
 }
@@ -298,8 +289,7 @@
   }
 
   .chefs-container {
-    /* grid-template-columns: 1fr; */
-    gap: 2rem;
+      gap: 2rem;
   }
 
   .chef-img {
@@ -471,10 +461,6 @@
   .chef-img {
     height: 200px;
   }
-
-  /* .atmosphere {
-    height: 25vh;
-  } */
 
   .hours ul li {
     font-size: 0.85rem;
