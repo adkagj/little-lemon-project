@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 import "./AboutPage.css";
-// import restaurantImg from "../../assets/images/restaurant.jpg";
 import aboutImageB from "../../assets/images/about-image-b.jpg";
 import aboutImageA from "../../assets/images/about-image-a.jpg";
 
