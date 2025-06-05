@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Specials.css";
 import greekSalad from "../../assets/images/greek-salad.jpg";
 import bruchetta from "../../assets/images/bruchetta.jpg";
 import lemonDessert from "../../assets/images/lemon-dessert.jpg";
