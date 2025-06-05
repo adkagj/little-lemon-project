@@ -7,11 +7,6 @@ const saveFormData = (data) => {
   localStorage.setItem("bookingFormData", JSON.stringify(data));
 };
 
-// const getStoredFormData = () => {
-//   const stored = localStorage.getItem("bookingFormData");
-//   return stored ? JSON.parse(stored) : null;
-// };
-
 const availableTimesReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TIME":
